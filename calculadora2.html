@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Fox Electronics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body body style="background-color: #F1EBEB;">
+<script>
+  
+  function precioVenta(){
+
+    var a = document.f1.valorCompra.value;
+    var b = document.f1.utilidad.value / 100;
+    var c = document.f1.iva.value / 100;
+
+
+    var r = document.f1.resultado.value;
+
+    r = parseFloat(a) + (parseFloat(a) * b) + (parseFloat(b) * c);
+    document.f1.resultado.value = r;
+  }
+
+</script>
+<form name="f1" class="form-horizontal" action="calculadora.html" method="POST">
+<fieldset>
+
+<!-- Form Name -->
+<legend> Calculadora</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="valorCompra">Valor compra</label>  
+  <div class="col-md-4">
+  <input id="valorCompra" name="valorCompra" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="utilidad">% utilidad</label>  
+  <div class="col-md-4">
+  <input id="utilidad" name="utilidad" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="iva">% IVA</label>  
+  <div class="col-md-4">
+  <input id="iva" name="iva" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" onclick="precioVenta()" class="btn btn-primary">Calcular</button>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="resultado">Resultado</label>  
+  <div class="col-md-4">
+  <input id="resultado" name="resultado" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</body>
+
+</html>

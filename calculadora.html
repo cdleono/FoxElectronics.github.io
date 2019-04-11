@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Fox Electronics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body body style="background-color: #F1EBEB;">
+    
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Fox Electronics</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Administración</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Inventario
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="formulario1.html">Guardar producto</a>
+        <a class="dropdown-item" href="formulario2.html">Actualizar producto</a>    
+        <a class="dropdown-item" href="formulario3.html">Eliminar producto</a> 
+        <a class="dropdown-item" href="formulario4.html">Consultar producto</a>                       
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Ventas</a>
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Utilidades
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="calculadora.html">Calculadora</a>
+        <a class="dropdown-item" href="resistencia.html">Resistencia</a>        
+      </div>
+    </li>
+  </ul>
+</nav>
+
+  <h1>Calculadora</h1>
+
+
+<script>
+  function precioVenta(){
+
+    var a = document.f1.valorCompra.value;
+    var b = document.f1.utilidad.value / 100;
+    var c = document.f1.iva.value / 100;
+    var r = document.f1.resultado.value;
+    var d = (parseFloat(a) * b);
+
+    r = parseFloat(a) + d + (parseFloat(a) * c);
+    document.f1.resultado.value = r;
+    document.f1.utilidades.value = d;
+  }
+
+</script> 
+
+
+
+<form name="f1" action="calculadora.html" method="POST">
+    <fieldset>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="valorCompra">Valor compra</label>  
+  <div class="col-md-4">
+  <input id="valorCompra" name="valorCompra" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="utilidad">% utilidad</label>  
+  <div class="col-md-4">
+  <input id="utilidad" name="utilidad" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="iva">% IVA</label>  
+  <div class="col-md-4">
+  <input id="iva" name="iva" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <input type="Button" name="" value="calcular" onclick="precioVenta()" class="btn btn-primary">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="resultado">Resultado</label>  
+  <div class="col-md-4">
+  <input id="resultado" name="resultado" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="utilidades">utilidades</label>  
+  <div class="col-md-4">
+  <input id="utilidades" name="utilidades" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+</fieldset>      
+	</div>
+
+  	</form>
+
+
+      
+</div>
+
+</body>
+</html>
